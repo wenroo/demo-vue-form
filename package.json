@@ -1,0 +1,55 @@
+{
+  "name": "WenUI",
+  "version": "2.0.0",
+  "description": "WenUI: TEMPLATE - HTML,DRUPAL,BACKBONE",
+  "main": "gulpfile.js",
+  "scripts": {
+    "watch-css": "gulp watch-css",
+    "watch-js": "watchify js/scripts/index.js -o  js/init.js -dv",
+    "watch": "npm run watch-css & npm run watch-js",
+    "build-css": "gulp build-css",
+    "build-js": "browserify js/scripts/index.js | uglifyjs -c -m > js/init.js",
+    "build": "gulp build-css & npm run build-js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wenroo/wenroo.git"
+  },
+  "keywords": [
+    "wenroo",
+    "webSite",
+    "weixin",
+    "drupal",
+    "symfony",
+    "tempalte"
+  ],
+  "author": "hello@wenroo.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenroo/wenroo/issues"
+  },
+  "homepage": "https://github.com/wenroo/wenroo",
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "bootstrap": "^3.3.7",
+    "browserify": "^13.1.0",
+    "del": "^2.2.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-less": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "jquery": "^3.1.1",
+    "moment": "^2.15.1",
+    "screenfull": "^3.0.2",
+    "uglifyjs": "^2.4.10",
+    "underscore": "^1.8.3",
+    "vue": "^1.0.27",
+    "vue-async-data": "^1.0.2",
+    "vue-devtools": "git+https://github.com/vuejs/vue-devtools.git",
+    "watchify": "^3.7.0"
+  }
+}

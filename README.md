@@ -1,2 +1,1 @@
-# Huawei
 # demo-vue-form

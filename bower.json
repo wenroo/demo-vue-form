@@ -1,0 +1,17 @@
+{
+  "name": "wenmobi",
+  "version": "0.0.1",
+  "authors": [
+    "wei.wei <wei.wei@davyin.com>"
+  ],
+  "description": "javascript plugin",
+  "license": "MIT",
+  "devDependencies": {
+    "html5shiv": "~3.7.2",
+    "select2": "git@github.com:select2/select2.git#~4.0.0",
+    "all-animation": "^2.1.2",
+    "device.js": "devicejs#^0.2.7",
+    "countdown": "git@github.com:rendro/countdown.git#^2.2.0",
+    "store-js": "git@github.com:marcuswestin/store.js.git#^1.3.20"
+  }
+}

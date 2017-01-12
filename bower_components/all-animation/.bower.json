@@ -1,0 +1,41 @@
+{
+  "name": "all-animation",
+  "version": "2.1.2",
+  "homepage": "https://github.com/clovisdasilvaneto/all-animation",
+  "authors": [
+    "clovisdasilvaneto <cloves13@hotmail.com>"
+  ],
+  "description": "The all animation is a framework css3 created focusing on 3D 's animations and cross browsers.",
+  "main": [
+    "assets/stylus/all-animation.styl"
+  ],
+  "keywords": [
+    "all",
+    "animation",
+    "clóvis",
+    "neto",
+    "all",
+    "animation",
+    "css3",
+    "animations",
+    "in",
+    "css3"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "2.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.2",
+    "commit": "fca1d211dce46cf264198b2fe00b089ce07f0312"
+  },
+  "_source": "https://github.com/all-animation/all-animation.git",
+  "_target": "^2.1.2",
+  "_originalSource": "all-animation"
+}
