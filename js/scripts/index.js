@@ -6,7 +6,7 @@ require('bootstrap/js/transition');
 // require('bootstrap/js/dropdown');
 // require('bootstrap/js/collapse');
 require('../../bower_components/device.js/lib/device.min');
-require('../../bower_components/countdown/dest/jquery.countdown');
+//require('../../bower_components/countdown/dest/jquery.countdown');
 
 var wenui = require('./modules/wenui');
 var theme = require('./modules/theme');
@@ -16,6 +16,9 @@ wenui.jQueryBrowser();
 
 (function ($) {
 
-  theme.init();
+  //theme.init();
+
+  var drop = require('./modules/drop');
+  drop.init();
 
 })(jQuery);

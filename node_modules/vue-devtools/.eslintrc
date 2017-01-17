@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "extends": "vue",
+  "plugins": [
+    "html"
+  ],
+  "globals": {
+    "bridge": true,
+    "chrome": true
+  },
+  "rules": {
+    "object-curly-spacing": 0
+  }
+}
