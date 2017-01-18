@@ -12,6 +12,10 @@
     "all-animation": "^2.1.2",
     "device.js": "devicejs#^0.2.7",
     "countdown": "git@github.com:rendro/countdown.git#^2.2.0",
-    "store-js": "git@github.com:marcuswestin/store.js.git#^1.3.20"
+    "store-js": "git@github.com:marcuswestin/store.js.git#^1.3.20",
+    "vue.draggable": "https://github.com/SortableJS/Vue.Draggable.git#^2.4.0"
+  },
+  "dependencies": {
+    "Sortable": "sortablejs#^1.4.2"
   }
 }

@@ -36,24 +36,54 @@
       <div id="header" class="inside-lr inside-min-tb">
         <h1 id="page-title">{{title}}</h1>
       </div>
-      <div id="container-drop" class="container-fluid">
-        <a href="#" class="btn drop-list-left"><i class="icon">&#xe611;</i></a>
-        <a href="#" class="btn drop-list-right"><i class="icon">&#xe601;</i></a>
-        <div id="drop-swiper" class="swiper-container outside-tb">
-          <div class="clearfix swiper-wrapper">
-            <drop-list-item
-              class="swiper-slide"
-              v-for="item in droplist.items"
-              :model="item">
-            </drop-list-item>
-          </div>
-        </div>
+      <div id="container-drag" class="container-fluid">
+        <a href="#" class="btn drag-swiper-left"><i class="icon">&#xe611;</i></a>
+        <a href="#" class="btn drag-swiper-right"><i class="icon">&#xe601;</i></a>
+
+        <drag-clone
+          :collection="draglist"
+          id="drag-swiper"
+          class="swiper-container outside-tb">
+        </drag-clone>
+
         <p class="outside">请拖动上面的区块到下面网格中完成布局。</p>
-        <div id="drop-box" class="clearfix swiper-wrapper"></div>
+
+        <drag-drop
+          v-sortable="{ onUpdate: onUpdate }"
+          :collection="droplist"
+          id="drop-box"
+          class="clearfix"
+        >
+        </drag-drop>
+
       </div>
     </script>
 
-    <script type="text/x-template" id="drop-list-item-template">
+    <script type="text/x-template" id="drag-drop-template">
+        <div>
+          <div
+            style="float:left; margin-right: 10px;"
+            v-for="item in collection.items"
+            :model="item">
+                  <img v-bind:src="item.preview" width="90" height="90" class="preview">
+                  <h3 class="title">{{item.name}}</h3>
+          </div>
+        </div>
+    </script>
+
+    <script type="text/x-template" id="drag-clone-template">
+      <div>
+        <div id="drag-box" class="clearfix swiper-wrapper">
+          <swiper-slide
+            class="swiper-slide"
+            v-for="item in collection.items"
+            :model="item">
+          </swiper-slide>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/x-template" id="swiper-slide-template">
       <div>
       <img v-bind:src="model.preview" width="90" height="90" class="preview">
       <h3 class="title">{{model.name}}</h3>

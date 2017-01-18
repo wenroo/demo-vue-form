@@ -9,11 +9,16 @@ View.config.devtools = false;
 View.config.debug = true;
 
 //UI
-var shapeShift = require('../../../bower_components/jquery.shapeshift/core/jquery.shapeshift')
-require('../../../bower_components/jquery-ui/jquery-ui');
-require('../../../bower_components/jquery.shapeshift/core/vendor/jquery.ui.touch-punch.min');
 
-var droplist = {
+var draglist = {
+  'options':{
+    'group': {
+      'name': 'dragdrop',
+      'pull': false,
+      'put': true
+    },
+    'animation': 150
+  },
   'items' : [
   {
     'name' : '2*2整块',
@@ -51,8 +56,26 @@ var droplist = {
     'name' : '2*2上下',
     'preview': './images/droplist/003.jpg',
   },
+  ],
+};
+var droplist = {
+  'options':{
+    'sort':false,
+    'group': {
+      'name': 'dragdrop',
+      'pull': 'clone',
+      'put': false,
+    },
+    'animation': 150
+  },
+  'items' : [
+  {
+    'name' : '2*2整块',
+    'preview': './images/droplist/001.jpg',
+  },
   ]
 };
+
 
 module.exports = {
   init:function(data){
@@ -64,6 +87,7 @@ module.exports = {
       template: '#drop-main-template',
       data: {
         'title': '楼层部署页面',
+        'draglist': draglist,
         'droplist': droplist,
       },
       init: function(){
@@ -73,62 +97,14 @@ module.exports = {
       },
       ready: function() {
         console.log('in');
-        // $('#drop-box').shapeshift({
-        //   crossDropWhitelist: ".swiper-slide",
-        // });
-        $('.swiper-wrapper').shapeshift({
-          //selector: "*",
-          // # Features
-          // enableDrag: false,
-          // enableCrossDrop: true
-          enableResize: true,
-          // enableTrash: false
-
-          // # Grid Properties
-          // align: "center"
-          colWidth: 90,
-          columns: 8,
-          // minColumns: 1
-          // autoHeight: true
-          maxHeight: 360,
-          // minHeight: 100
-          // gutterX: 10
-          // gutterY: 10
-          paddingX: 0, //10
-          paddingY: 0, //10
-
-          // # Animation
-          animated: false,
-          // animateOnInit: false
-          // animationSpeed: 225
-          // animationThreshold: 100
-
-          // # Drag/Drop Options
-          dragClone: true,
-          //deleteClone: false,
-          dragRate: 0, //100
-          //dragWhitelist: "#drop-box",
-          //crossDropWhitelist: "#drop-box",
-          // cutoffStart: null
-          // cutoffEnd: null
-          // handle: false
-
-          // # Customize CSS
-          // cloneClass: "ss-cloned-child"
-          // activeClass: "ss-active-child"
-          // draggedClass: "ss-dragged-child"
-          // placeholderClass: "ss-placeholder-child"
-          // originalContainerClass: "ss-original-container"
-          // currentContainerClass: "ss-current-container"
-          // previousContainerClass: "ss-previous-container"
-        });
       },
       watch: {
       },
       methods: {
       },
       components: {
-        'drop-list-item': require('./form/drop-swiper'),
+        'drag-clone': require('./form/drag-clone'),
+        'drag-drop': require('./form/drag-drop'),
       }
     });
 

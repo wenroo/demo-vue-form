@@ -155,17 +155,17 @@ body{
 
 
 /* Drop */
-#container-drop{
+#container-drag{
   position: relative;
   width: 940px;
   .outside-tb;
   margin-left: auto;
   margin-right: auto;
-  .drop-list-left,
-  .drop-list-right{
+  .drag-swiper-left,
+  .drag-swiper-right{
     background-color:#f0f5f7;
     position: absolute;
-    top: 0;
+    top: 10px;
     height: 90px;
     width: 30px;
     line-height: 75px;
@@ -173,13 +173,13 @@ body{
 
     }
   }
-  .drop-list-left{
+  .drag-swiper-left{
     left: 15px;
     .icon{
       margin-right: 10px;
     }
   }
-  .drop-list-right{
+  .drag-swiper-right{
     right: 15px;
   }
   .swiper-button-disabled{
@@ -193,16 +193,17 @@ body{
   .outside-tb;
   border: 1px dashed #ff5200;
 }
-#drop-swiper{
+#drag-swiper{
   margin-right: 45px;
   margin-left: 45px;
   overflow: visible;
+  overflow-x: hidden;
   .swiper-wrapper{
     .swiper-slide{
       .g-in;
-      position: absolute;
-      width: 90px;
-      height: 120px;
+      width: 106px;
+      padding: 10px 5px;
+      height: 140px;
       text-align: center;
       img{
         display: block;
@@ -220,6 +221,13 @@ body{
 }
 
 
-
+.sortable-chosen.sortable-ghost{
+  img{
+    box-shadow: 0px 6px 7px 1px rgba(0, 0, 0, 0.15);
+    .opacity(.55);
+  }
+}
+.sortable-ghost{
+}
 
 
