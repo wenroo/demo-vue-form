@@ -157,7 +157,7 @@ body{
 /* Drop */
 #container-drop{
   position: relative;
-  width: 900px;
+  width: 940px;
   .outside-tb;
   margin-left: auto;
   margin-right: auto;
@@ -174,33 +174,47 @@ body{
     }
   }
   .drop-list-left{
-    left: -30px;
+    left: 15px;
     .icon{
       margin-right: 10px;
     }
   }
   .drop-list-right{
-    right: -30px;
+    right: 15px;
   }
   .swiper-button-disabled{
     .btn-disabled;
   }
 }
-#drop-list{
-  li{
-    .g-in;
-    width: auto;
-    text-align: center;
-    img{
-      display: block;
-      margin: 0 5px;
-      cursor: -webkit-grab;
-      cursor: grab;
-    }
-    h3{
-      cursor: ew-resize;
-      .outside-min-t;
-      font-size: 13px;
+#drop-box{
+  .g-in;
+  width: 100%;
+  min-height: 120px;
+  .outside-tb;
+  border: 1px dashed #ff5200;
+}
+#drop-swiper{
+  margin-right: 45px;
+  margin-left: 45px;
+  overflow: visible;
+  .swiper-wrapper{
+    .swiper-slide{
+      .g-in;
+      position: absolute;
+      width: 90px;
+      height: 120px;
+      text-align: center;
+      img{
+        display: block;
+        //margin: 0 8px;
+        cursor: -webkit-grab;
+        cursor: grab;
+      }
+      h3{
+        cursor: ew-resize;
+        .outside-min-t;
+        font-size: 13px;
+      }
     }
   }
 }

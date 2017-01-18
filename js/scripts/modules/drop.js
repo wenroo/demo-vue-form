@@ -8,6 +8,10 @@ var _ = require('underscore'),
 View.config.devtools = false;
 View.config.debug = true;
 
+//UI
+var shapeShift = require('../../../bower_components/jquery.shapeshift/core/jquery.shapeshift')
+require('../../../bower_components/jquery-ui/jquery-ui');
+require('../../../bower_components/jquery.shapeshift/core/vendor/jquery.ui.touch-punch.min');
 
 var droplist = {
   'items' : [
@@ -68,6 +72,56 @@ module.exports = {
         var self = this;
       },
       ready: function() {
+        console.log('in');
+        // $('#drop-box').shapeshift({
+        //   crossDropWhitelist: ".swiper-slide",
+        // });
+        $('.swiper-wrapper').shapeshift({
+          //selector: "*",
+          // # Features
+          // enableDrag: false,
+          // enableCrossDrop: true
+          enableResize: true,
+          // enableTrash: false
+
+          // # Grid Properties
+          // align: "center"
+          colWidth: 90,
+          columns: 8,
+          // minColumns: 1
+          // autoHeight: true
+          maxHeight: 360,
+          // minHeight: 100
+          // gutterX: 10
+          // gutterY: 10
+          paddingX: 0, //10
+          paddingY: 0, //10
+
+          // # Animation
+          animated: false,
+          // animateOnInit: false
+          // animationSpeed: 225
+          // animationThreshold: 100
+
+          // # Drag/Drop Options
+          dragClone: true,
+          //deleteClone: false,
+          dragRate: 0, //100
+          //dragWhitelist: "#drop-box",
+          //crossDropWhitelist: "#drop-box",
+          // cutoffStart: null
+          // cutoffEnd: null
+          // handle: false
+
+          // # Customize CSS
+          // cloneClass: "ss-cloned-child"
+          // activeClass: "ss-active-child"
+          // draggedClass: "ss-dragged-child"
+          // placeholderClass: "ss-placeholder-child"
+          // originalContainerClass: "ss-original-container"
+          // currentContainerClass: "ss-current-container"
+          // previousContainerClass: "ss-previous-container"
+        });
       },
       watch: {
       },

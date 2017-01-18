@@ -39,23 +39,25 @@
       <div id="container-drop" class="container-fluid">
         <a href="#" class="btn drop-list-left"><i class="icon">&#xe611;</i></a>
         <a href="#" class="btn drop-list-right"><i class="icon">&#xe601;</i></a>
-        <div class="swiper-container outside-tb">
-          <ul id="drop-list" class="list clearfix swiper-wrapper">
+        <div id="drop-swiper" class="swiper-container outside-tb">
+          <div class="clearfix swiper-wrapper">
             <drop-list-item
               class="swiper-slide"
               v-for="item in droplist.items"
               :model="item">
             </drop-list-item>
-          </ul>
+          </div>
         </div>
+        <p class="outside">请拖动上面的区块到下面网格中完成布局。</p>
+        <div id="drop-box" class="clearfix swiper-wrapper"></div>
       </div>
     </script>
 
     <script type="text/x-template" id="drop-list-item-template">
-      <li>
+      <div>
       <img v-bind:src="model.preview" width="90" height="90" class="preview">
       <h3 class="title">{{model.name}}</h3>
-      </li>
+      </div>
     </script>
 
     <script charset="utf-8" src="./js/jquery.min.js"></script>

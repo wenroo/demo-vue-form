@@ -11,24 +11,24 @@ module.exports = View.extend({
   created: function(){
   },
   ready: function(){
-		console.log(this);
-		var mySwiper = new Swiper ('.swiper-container', {
-		    // Optional parameters
-		    direction: 'horizontal',
-		    slidesPerView : 8,
-		    //loop: true,
-		    // preventClicks : false,
-		    //noSwiping : true,
-		    swipeHandler : '.title',
-		    // If we need pagination
-		    //pagination: '.swiper-pagination',
+		// console.log(this);
+		// this.mySwiper = new Swiper ('#drop-swiper', {
+		//     // Optional parameters
+		//     direction: 'horizontal',
+		//     slidesPerView : 'auto',
+		//     //loop: true,
+		//     // preventClicks : false,
+		//     //noSwiping : true,
+		//     swipeHandler : '.title',
+		//     // If we need pagination
+		//     //pagination: '.swiper-pagination',
 
-		    // Navigation arrows
-		    nextButton: '.drop-list-left',
-		    prevButton: '.drop-list-right',
+		//     // Navigation arrows
+		//     nextButton: '.drop-list-left',
+		//     prevButton: '.drop-list-right',
 
-		    // And if we need scrollbar
-		    //scrollbar: '.swiper-scrollbar',
-		})
+		//     // And if we need scrollbar
+		//     //scrollbar: '.swiper-scrollbar',
+		// })
   }
 });
